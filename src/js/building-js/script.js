@@ -1,16 +1,17 @@
 import Seo from './parts/seo'
+import Menu from './parts/menu'
+import Burger from './parts/burger'
 
 document.addEventListener('DOMContentLoaded', () => {
 
 
   const seo = new Seo();
-
-  console.log(typeof 'NTcn' == 'string');
-
-  let getMessage = (text, name) => {
-    console.log(`${text}, ${name}`);
+  if(document.documentElement.clientWidth > 1024) {
+    const header = new Menu();
   }
 
-  setTimeout(getMessage, 500, 'Hi', 'Vasya');
+  if(document.querySelector(".burger")) {
+    const burger = new Burger();
+  }
 
 });
