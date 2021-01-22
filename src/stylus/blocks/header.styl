@@ -10,6 +10,18 @@
   @media tablet-portrait-large
     padding 20px 0
 
+  &.header__fixed 
+    padding 20px 0
+    box-shadow: 3px 4px 30px rgba(0, 0, 0, 0.15);
+    .header__inner
+      align-items center
+    .header__row--top
+        display none
+        @media tablet-portrait-large
+            display flex
+    .logo__image-wrap
+      width 150px
+
   &__inner 
     display flex
     flex-wrap nowrap
@@ -49,25 +61,33 @@
     display flex
     align-items center
     @media tablet-portrait-large
-        display flex
-        flex-direction column
-        align-items center
-        width 100%
-        margin 50px 0 0 0
-        order 1
+      display flex
+      flex-direction column
+      align-items flex-start
+      width 100%
+      margin 50px 0 0 0
+      padding 0 50px
+      order 1
+    @media phone
+      padding 0 20px
 
   &__row:first-of-type
       margin-bottom 28px
 
+  &__social
+    @media tablet-portrait-large
+      margin-bottom 24px
+
   &__email 
     position relative
-    // display inline
     margin-left 30px
     text-decoration none
     font-size 16px
     color text-color
     z-index 1
     transition color 0.3s
+    @media tablet-portrait-large
+      margin 0 0 24px 0
     &:hover 
       color text-color-hover
       &:after
@@ -89,6 +109,8 @@
     text-decoration none
     color text-color
     transition color 0.3s
+    @media tablet-portrait-large
+      margin 0 0 24px 0
     &:hover 
       color text-color-hover
 
@@ -105,11 +127,12 @@
     background-color main-color
     cursor pointer
     transition background-color .3s ease
+    @media tablet-portrait-large
+      margin 0
     &:hover 
       background-color green-hover
   &__burger
     position absolute
-    // top 39px
     top 50%
     right 32px
     z-index 2
@@ -127,6 +150,7 @@
   align-items center
   &__image-wrap
     width 203px
+    transition width 0.3s
     // height 86px
     @media tablet-portrait-large
       width 150px
@@ -206,11 +230,7 @@
     letter-spacing: 2.3px;
     color text-color
     transition color .3s ease
-    // cursor default
     text-transform uppercase
-    // @media tablet-portrait-large
-    //   font-size 36px
-    //   line-height 40px
     @media tablet-portrait-large
       flex-direction column
       align-items flex-start
@@ -230,14 +250,6 @@
           visibility visible
         .menu__icon-wrap
           transform rotate(180deg)
-      // .menu__link
-      //   &:after
-      //     content ''
-      //     width 8px
-      //     height 8px
-      //     margin-left 6px
-      //     background url(../img/icons/icons.svg#arrow-down) no-repeat center
-      //     transition transform 0.3s
       
     
     &.to-eng
@@ -268,7 +280,6 @@
   &__icon-wrap 
     width 8px
     margin-left 6px
-    // height 8px
     transition transform 0.3s
     @media tablet-portrait-large
       display none

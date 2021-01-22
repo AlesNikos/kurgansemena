@@ -16,7 +16,17 @@
   \********************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => /* binding */ Burger\n/* harmony export */ });\nclass Burger {\r\n  constructor() {\r\n    this.burgerButton = document.querySelector(\".burger\");;\r\n    this.init();\r\n  }\r\n\r\n  init() {\r\n    this.burgerButton.addEventListener(\"click\", changeMenuState);\r\n\r\n    function changeMenuState(){\r\n        document.body.classList.toggle(\"js-burger-menu-is-open\");\r\n    };\r\n\r\n  }\r\n\r\n\r\n}\n\n//# sourceURL=webpack://template_for_dev/./src/js/building-js/parts/burger.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => /* binding */ Burger\n/* harmony export */ });\nclass Burger {\r\n  constructor() {\r\n    this.burgerButton = document.querySelector(\".burger\");\r\n    this.init();\r\n  }\r\n\r\n  init() {\r\n    this.burgerButton.addEventListener(\"click\", changeMenuState);\r\n\r\n    function changeMenuState(){\r\n        document.body.classList.toggle(\"js-burger-menu-is-open\");\r\n    };\r\n\r\n  }\r\n\r\n\r\n}\n\n//# sourceURL=webpack://template_for_dev/./src/js/building-js/parts/burger.js?");
+
+/***/ }),
+
+/***/ "./src/js/building-js/parts/header-fixed.js":
+/*!**************************************************!*\
+  !*** ./src/js/building-js/parts/header-fixed.js ***!
+  \**************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => /* binding */ Header_fixed\n/* harmony export */ });\nclass Header_fixed {\r\n  constructor() {\r\n    // this.header = document.querySelector('.header');\r\n    this.init();\r\n  }\r\n\r\n  init() {\r\n\r\n    let header = document.querySelector('.header');\r\n    window.addEventListener('scroll', function() {\r\n      if (window.pageYOffset > 1) {\r\n        header.classList.add('header__fixed');\r\n      } else {\r\n        header.classList.remove('header__fixed');\r\n      }\r\n    });\r\n  }\r\n\r\n}\r\n\n\n//# sourceURL=webpack://template_for_dev/./src/js/building-js/parts/header-fixed.js?");
 
 /***/ }),
 
@@ -46,7 +56,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
   \**************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _parts_seo__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./parts/seo */ \"./src/js/building-js/parts/seo.js\");\n/* harmony import */ var _parts_menu__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./parts/menu */ \"./src/js/building-js/parts/menu.js\");\n/* harmony import */ var _parts_burger__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./parts/burger */ \"./src/js/building-js/parts/burger.js\");\n\r\n\r\n\r\n\r\ndocument.addEventListener('DOMContentLoaded', () => {\r\n\r\n\r\n  const seo = new _parts_seo__WEBPACK_IMPORTED_MODULE_0__.default();\r\n  if(document.documentElement.clientWidth > 1024) {\r\n    const header = new _parts_menu__WEBPACK_IMPORTED_MODULE_1__.default();\r\n  }\r\n\r\n  if(document.querySelector(\".burger\")) {\r\n    const burger = new _parts_burger__WEBPACK_IMPORTED_MODULE_2__.default();\r\n  }\r\n\r\n});\n\n//# sourceURL=webpack://template_for_dev/./src/js/building-js/script.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _parts_seo__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./parts/seo */ \"./src/js/building-js/parts/seo.js\");\n/* harmony import */ var _parts_menu__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./parts/menu */ \"./src/js/building-js/parts/menu.js\");\n/* harmony import */ var _parts_burger__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./parts/burger */ \"./src/js/building-js/parts/burger.js\");\n/* harmony import */ var _parts_header_fixed__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./parts/header-fixed */ \"./src/js/building-js/parts/header-fixed.js\");\n\r\n\r\n\r\n\r\n\r\ndocument.addEventListener('DOMContentLoaded', () => {\r\n\r\n\r\n  const seo = new _parts_seo__WEBPACK_IMPORTED_MODULE_0__.default();\r\n  const header_fixed = new _parts_header_fixed__WEBPACK_IMPORTED_MODULE_3__.default();\r\n  \r\n  if(document.documentElement.clientWidth > 1024) {\r\n    const header = new _parts_menu__WEBPACK_IMPORTED_MODULE_1__.default();\r\n  }\r\n\r\n  if(document.querySelector(\".burger\")) {\r\n    const burger = new _parts_burger__WEBPACK_IMPORTED_MODULE_2__.default();\r\n  }\r\n\r\n});\n\n//# sourceURL=webpack://template_for_dev/./src/js/building-js/script.js?");
 
 /***/ })
 
