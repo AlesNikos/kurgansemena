@@ -10,6 +10,71 @@ html(lang="ru")
         //- include ../../build/images/sprite.svg
     include layout/_header.pug
     main.main.main-page
+      section.banner
+        .container
+          .main-slider.swiper-container.js-main-slider
+            ul.main-slider__list.swiper-wrapper
+              li.main-slider__item-wrapper.swiper-slide
+                .main-slider__item
+                  .main-slider__image-wrapper
+                    img.main-slider__image(src="img/main-slide-01.png", alt="")
+                  .main-slider__info
+                    h2.main-slider__heading
+                      |Зерно
+                    .main-slider__description
+                      p
+                        |производство, закуп и реализация зерна в РФ и на экспорт
+                    a.common__link.common__link--backing.main-slider__link.hidden-dlink(data-al="")
+                      |Узнать подробнее
+              li.main-slider__item-wrapper.swiper-slide
+                .main-slider__item
+                  .main-slider__image-wrapper
+                    img.main-slider__image(src="https://i.pinimg.com/originals/14/e0/1e/14e01e1cfa4eac045531f35b7eea6cdb.jpg", alt="")
+                  .main-slider__info
+                    h2.main-slider__heading
+                      |Семена
+                    .main-slider__description
+                      p
+                        |производство, закуп и реализация зерна в РФ и на экспорт
+                    a.common__link.common__link--backing.main-slider__link.hidden-dlink(data-al="")
+                      |Узнать подробнее
+
+
+
+            .main-slider__pagination.js-main-slider-pagination
+              .slider-pagination-bullet
+                .main-slider__pagination-img-wrap
+                  //- img.main-slider__pagination-img(src="img/icons/icons.svg#Nauka" class="svg-Nauka-dims" alt="Nauka")
+                span.main-slider__pagination-text(data-text="Наука")
+                  |Наука
+              .slider-pagination-bullet
+                .main-slider__pagination-img-wrap
+                  //- img.main-slider__pagination-img(src="img/icons/icons.svg#Semena" class="svg-Semena-dims" alt="Semena")
+                span.main-slider__pagination-text(data-text="Семена")
+                  |Семена
+              .slider-pagination-bullet
+                .main-slider__pagination-img-wrap
+                  //- img.main-slider__pagination-img(src="img/icons/icons.svg#Semena" class="svg-Semena-dims" alt="Semena")
+                span.main-slider__pagination-text(data-text="Семена")
+                  |Семена
+
+      section.news.news-section
+        .container
+          h3.common__h3-heading.news-section__heading
+            |Новости
+          .news-slider.swiper-container.js-news-slider
+            .news-slider__list.swiper-wrapper
+              .news-slider__item.swiper-slide
+                article.news-preview
+                  .news-preview__img-wrap
+                    img.news-preview__img(src="./img/news/news-img-1.png", alt="")
+                  .news-preview__info
+                    .news-preview__date
+                      |18/08/2020
+                    h6.news-preview__title
+                      |Экспортер года
+                  
+
 
 
     include layout/_footer.pug

@@ -2,6 +2,7 @@ import Seo from './parts/seo'
 import Menu from './parts/menu'
 import Burger from './parts/burger'
 import Header_fixed from './parts/header-fixed'
+import Slider from './parts/slider'
 
 document.addEventListener('DOMContentLoaded', () => {
 
@@ -16,5 +17,21 @@ document.addEventListener('DOMContentLoaded', () => {
   if(document.querySelector(".burger")) {
     const burger = new Burger();
   }
+
+  if(document.querySelector(".js-main-slider")) {
+    const slider = new Slider();
+  }
+  if(document.querySelector(".js-news-slider")) {
+    let newsSwiper = new Swiper(".js-news-slider", {
+      init: true,
+      spaceBetween: 42,
+      speed: 1000,
+      slidesPerView: 3,
+      loop: false,
+      direction: "horizontal",
+      watchOverflow: true,
+    });
+  }
+
 
 });
