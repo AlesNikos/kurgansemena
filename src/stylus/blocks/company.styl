@@ -1,0 +1,193 @@
+@keyframes spoiler {
+    0% {
+        opacity: 0.3;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes scale {
+    0% {
+      transform scale(0)  
+    }
+    100% {
+      transform scale(1)  
+    }
+  }
+
+
+.company-section
+  padding 61px 0 397px
+  & > .container
+    max-width 1240px
+  &__heading
+    max-width 820px
+    margin 0 0 26px -3px
+  &__description
+    max-width 405px
+    margin 0 0 32px 0
+    @media tablet-portrait-small
+      max-width 100%
+  &__info
+    position relative
+    margin-top 70px
+  &__info-container
+    @media tablet-portrait-large
+      display none
+  &__info-content
+    position relative
+    animation spoiler 1s
+  &__img-wrap
+    display flex
+    position relative
+    max-width 701px
+    width 100%
+    height 415px
+    border-radius 20px
+    overflow hidden
+  &__img
+    position absolute
+    top 50%
+    left 50%
+    transform translate(-50%, -50%)
+    width 100%
+    height 100%
+    object-fit cover
+  &__small-img-wrap
+    display flex
+    position absolute
+    bottom -72px
+    left 51px
+    width 277px
+    height 277px
+    border-radius 83% 0%
+    overflow hidden
+    animation scale 1.5s
+
+  &__small-img
+    position absolute
+    top 50%
+    left 50%
+    transform translate(-50%, -50%)
+    width 100%
+    height 100%
+    object-fit cover
+  &__info-tabs
+    position absolute
+    right 0
+    top -208px
+    z-index 1
+    @media tablet-portrait-large
+      position static
+    .tabs__list
+      position relative
+      display flex
+      flex-wrap wrap
+      width 551px
+      @media tablet-portrait-large
+        max-width 100%
+        width auto
+    .tabs__item
+      position relative
+      flex 0 0 49%
+      max-width 270px
+      width 100%
+      height 270px
+      margin-bottom 10px
+      @media tablet-portrait-large
+        flex 0 0 33.333333%
+        max-width 33.333333%
+        padding 0 5px
+      @media tablet-portrait-small
+        flex 0 0 50%
+        max-width 50%        
+      @media phone
+        flex 0 0 100%
+        max-width 100%  
+        padding 0      
+      &:not(:nth-of-type(2n))
+        margin-right 10px
+        @media tablet-portrait-large 
+          margin-right 0
+      &:nth-of-type(2n)
+        &:before
+          top -107px
+          left 82%
+          transform scale(-1, 1)
+        &:after
+          left 0
+          transform translateY(-29px)
+        .tabs__button
+          border-radius 135px 0
+          transform translateY(-29px)
+          @media tablet-portrait-large
+            border-radius 20px
+            transform translateY(0px)
+      &:after 
+        content ''
+        position absolute
+        top 100%
+        right 0
+        display block
+        width 4px
+        height 141px
+        background-color #eeac40
+        @media tablet-portrait-large
+          display none
+      &:before
+        content ''
+        position absolute
+        top -78px
+        right 82%
+        display block
+        width 228px
+        height 126px
+        background url('../img/icons/icons.svg#company-img-line') center no-repeat
+        z-index -1
+        @media tablet-portrait-large
+          display none
+    .tabs__button
+      display flex
+      align-items center
+      justify-content center
+      flex-direction column
+      width 100%
+      height 100%
+      border-radius 0 135px
+      background-color #eeac40
+      overflow hidden
+      transition background-color 0.3s
+      cursor pointer
+      @media tablet-portrait-large
+        border-radius 20px
+        padding 20px
+      &:hover 
+        @media desktop-hover
+          background-color #f1bd66
+    .tabs__button-count
+      margin 0 0 5px 0
+      font-size 36px
+      font-weight 700
+      line-height 26px
+      color #fff
+      text-align center
+    .tabs__button-text
+      max-width 131px
+      margin 0 0 7px 0
+      font-size 24px
+      font-weight 700
+      line-height 26px
+      color #fff
+      text-align center
+      @media tablet-portrait-large
+        max-width 100%
+    .tabs__button-desc
+      max-width 167px
+      margin 0
+      line-height 23px
+      color #fff
+      text-align center
+      @media tablet-portrait-large
+        max-width 100%

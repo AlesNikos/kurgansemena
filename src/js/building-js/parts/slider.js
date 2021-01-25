@@ -9,7 +9,7 @@ export default class Slider {
 
     let texts = [];
 
-    let text = document.querySelectorAll('.main-slider__pagination-text');
+    let text = document.querySelectorAll('.main-slider__item-wrapper');
     text.forEach(function(i) {
       let txt = i.getAttribute("data-text");
       texts.push(txt)

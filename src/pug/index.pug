@@ -10,11 +10,13 @@ html(lang="ru")
         //- include ../../build/images/sprite.svg
     include layout/_header.pug
     main.main.main-page
+
+      // BEGIN MAIN-SLIDER
       section.banner
         .container
           .main-slider.swiper-container.js-main-slider
             ul.main-slider__list.swiper-wrapper
-              li.main-slider__item-wrapper.swiper-slide
+              li.main-slider__item-wrapper.swiper-slide(data-text="Наука")
                 .main-slider__item
                   .main-slider__image-wrapper
                     img.main-slider__image(src="./img/main-slide-01.png", alt="")
@@ -26,7 +28,7 @@ html(lang="ru")
                         |производство, закуп и реализация зерна в РФ и на экспорт
                     a.common__link.common__link--backing.main-slider__link.hidden-dlink(data-al="")
                       |Узнать подробнее
-              li.main-slider__item-wrapper.swiper-slide
+              li.main-slider__item-wrapper.swiper-slide(data-text="Семена")
                 .main-slider__item
                   .main-slider__image-wrapper
                     img.main-slider__image(src="./img/main-slide-01.png", alt="")
@@ -38,7 +40,7 @@ html(lang="ru")
                         |производство, закуп и реализация зерна в РФ и на экспорт
                     a.common__link.common__link--backing.main-slider__link.hidden-dlink(data-al="")
                       |Узнать подробнее
-              li.main-slider__item-wrapper.swiper-slide
+              li.main-slider__item-wrapper.swiper-slide(data-text="Зерно")
                 .main-slider__item
                   .main-slider__image-wrapper
                     img.main-slider__image(src="./img/main-slide-01.png", alt="")
@@ -50,7 +52,7 @@ html(lang="ru")
                         |производство, закуп и реализация зерна в РФ и на экспорт
                     a.common__link.common__link--backing.main-slider__link.hidden-dlink(data-al="")
                       |Узнать подробнее
-              li.main-slider__item-wrapper.swiper-slide
+              li.main-slider__item-wrapper.swiper-slide(data-text="Масло")
                 .main-slider__item
                   .main-slider__image-wrapper
                     img.main-slider__image(src="./img/main-slide-01.png", alt="")
@@ -62,7 +64,7 @@ html(lang="ru")
                         |производство, закуп и реализация зерна в РФ и на экспорт
                     a.common__link.common__link--backing.main-slider__link.hidden-dlink(data-al="")
                       |Узнать подробнее
-              li.main-slider__item-wrapper.swiper-slide
+              li.main-slider__item-wrapper.swiper-slide(data-text="Элеватор")
                 .main-slider__item
                   .main-slider__image-wrapper
                     img.main-slider__image(src="./img/main-slide-01.png", alt="")
@@ -75,15 +77,92 @@ html(lang="ru")
                     a.common__link.common__link--backing.main-slider__link.hidden-dlink(data-al="")
                       |Узнать подробнее
 
-
-
             .main-slider__pagination.js-main-slider-pagination
-              span.main-slider__pagination-text(data-text="Наука")
-              span.main-slider__pagination-text(data-text="Семена")
-              span.main-slider__pagination-text(data-text="Зерно")
-              span.main-slider__pagination-text(data-text="Масло")
-              span.main-slider__pagination-text(data-text="Элеватор")
+      // END MAIN-SLIDER
 
+      // BEGIN ABOUT COMPANY
+      section.company.company-section
+        .container
+          h1.common__h1-heading.company-section__heading
+            |Кургансемена — агрохолдинг нового типа
+          .company-section__description.common__wysiwyg
+            p
+              |История агрохолдинга «КУРГАНСЕМЕНА» — это история самоотверженного труда единомышленников, нацеленных на решение главной задачи — поступательное развитие сельского хозяйства региона и России, за счет обеспечения высококачественными семенами.
+          a.common__link.common__link--backing.company-section__link.hidden-dlink(data-al="#")
+            |Узнать больше
+          
+          .company-section__info
+            .tabs.company-section__info-tabs.js-tabs(data-tabs="company")
+              ul.tabs__list
+                li.tabs__item.tabs__item--active
+                  .tabs__button(data-tab="grown")
+                    p.tabs__button-count
+                      |50 000
+                    p.tabs__button-text
+                      |гектаров
+                    p.tabs__button-desc
+                      |пашни
+
+                li.tabs__item
+                  .tabs__button(data-tab="child")
+                    p.tabs__button-count
+                      |800
+                    p.tabs__button-text
+                      |рабочих мест
+                    p.tabs__button-desc
+                      |создано       
+
+                li.tabs__item
+                  .tabs__button(data-tab="grown")
+                    p.tabs__button-count
+                      |35 000
+                    p.tabs__button-text
+                      |тонн
+                    p.tabs__button-desc
+                      |семян зерновых и зернобобовых в год
+                li.tabs__item
+                  .tabs__button(data-tab="child")
+                    p.tabs__button-count
+                      |150 000
+                    p.tabs__button-text
+                      |тонн
+                    p.tabs__button-desc
+                      |производство и реализация зерна в год     
+                li.tabs__item
+                  .tabs__button(data-tab="grown")
+                    p.tabs__button-count
+                      |40 000
+                    p.tabs__button-text
+                      |тонн
+                    p.tabs__button-desc
+                      |в год мощность маслозавода   
+                li.tabs__item
+                  .tabs__button(data-tab="child")
+                    p.tabs__button-count
+                      |200 000
+                    p.tabs__button-text
+                      |тонн зерна
+                    p.tabs__button-desc
+                      |ёмкость складского хозяйства  
+
+            .company-section__info-container(data-tabs-content="company")
+
+              .company-section__info-content(data-tab-content="grown")
+                .company-section__img-wrap
+                  img.company-section__img(src="./img/company/company-img-1.png", alt="")
+                .company-section__small-img-wrap
+                  img.company-section__small-img(src="./img/company/company-img-2.png", alt="")
+
+              .company-section__info-content(data-tab-content="child")
+                .company-section__img-wrap
+                  img.company-section__img(src="./img/company/company-img-1.png", alt="")
+                .company-section__small-img-wrap
+                  img.company-section__small-img(src="./img/company/company-img-2.png", alt="")
+          
+      // END ABOUT COMPANY
+
+
+      // BEGIN NEWS
       section.news.news-section
         .container
           h3.common__h3-heading.news-section__heading
@@ -99,7 +178,7 @@ html(lang="ru")
                       |18/08/2020
                     h6.news-preview__title
                       |Экспортер года
-                  
+      // END NEWS
 
 
 

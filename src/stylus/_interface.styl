@@ -36,6 +36,7 @@ ul
 
 .common
   &__link
+    display inline-flex
     padding 9px 30px 7px
     border-radius 20px
     background-color main-color
@@ -47,7 +48,23 @@ ul
     transition background-color 0.3s
     &:hover 
       background-color green-hover
+  &__h1-heading
+    font-size 70px
+    font-weight 400
+    line-height 80px
+    @media tablet-portrait-small
+      font-size 48px
+      line-height 54px
+    @media phone
+      font-size 32px
+      line-height 38px
   &__h3-heading
     font-size 48px
     font-weight 400
     line-height 54px
+  &__wysiwyg
+    & p:not([class]):not(:last-child)
+      margin 0 0 20px 0
+
+.js-content-is-hidden
+    display none

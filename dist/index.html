@@ -90,11 +90,12 @@
       </div>
     </header>
     <main class="main main-page">
+      <!-- BEGIN MAIN-SLIDER-->
       <section class="banner">
         <div class="container">
           <div class="main-slider swiper-container js-main-slider">
             <ul class="main-slider__list swiper-wrapper">
-              <li class="main-slider__item-wrapper swiper-slide">
+              <li class="main-slider__item-wrapper swiper-slide" data-text="Наука">
                 <div class="main-slider__item">
                   <div class="main-slider__image-wrapper"><img class="main-slider__image" src="./img/main-slide-01.png" alt=""></div>
                   <div class="main-slider__info">
@@ -105,7 +106,7 @@
                   </div>
                 </div>
               </li>
-              <li class="main-slider__item-wrapper swiper-slide">
+              <li class="main-slider__item-wrapper swiper-slide" data-text="Семена">
                 <div class="main-slider__item">
                   <div class="main-slider__image-wrapper"><img class="main-slider__image" src="./img/main-slide-01.png" alt=""></div>
                   <div class="main-slider__info">
@@ -116,7 +117,7 @@
                   </div>
                 </div>
               </li>
-              <li class="main-slider__item-wrapper swiper-slide">
+              <li class="main-slider__item-wrapper swiper-slide" data-text="Зерно">
                 <div class="main-slider__item">
                   <div class="main-slider__image-wrapper"><img class="main-slider__image" src="./img/main-slide-01.png" alt=""></div>
                   <div class="main-slider__info">
@@ -127,7 +128,7 @@
                   </div>
                 </div>
               </li>
-              <li class="main-slider__item-wrapper swiper-slide">
+              <li class="main-slider__item-wrapper swiper-slide" data-text="Масло">
                 <div class="main-slider__item">
                   <div class="main-slider__image-wrapper"><img class="main-slider__image" src="./img/main-slide-01.png" alt=""></div>
                   <div class="main-slider__info">
@@ -138,7 +139,7 @@
                   </div>
                 </div>
               </li>
-              <li class="main-slider__item-wrapper swiper-slide">
+              <li class="main-slider__item-wrapper swiper-slide" data-text="Элеватор">
                 <div class="main-slider__item">
                   <div class="main-slider__image-wrapper"><img class="main-slider__image" src="./img/main-slide-01.png" alt=""></div>
                   <div class="main-slider__info">
@@ -150,10 +151,80 @@
                 </div>
               </li>
             </ul>
-            <div class="main-slider__pagination js-main-slider-pagination"><span class="main-slider__pagination-text" data-text="Наука"></span><span class="main-slider__pagination-text" data-text="Семена"></span><span class="main-slider__pagination-text" data-text="Зерно"></span><span class="main-slider__pagination-text" data-text="Масло"></span><span class="main-slider__pagination-text" data-text="Элеватор"></span></div>
+            <div class="main-slider__pagination js-main-slider-pagination"></div>
           </div>
         </div>
       </section>
+      <!-- END MAIN-SLIDER-->
+      <!-- BEGIN ABOUT COMPANY-->
+      <section class="company company-section">
+        <div class="container">
+          <h1 class="common__h1-heading company-section__heading">Кургансемена — агрохолдинг нового типа</h1>
+          <div class="company-section__description common__wysiwyg">
+            <p>История агрохолдинга «КУРГАНСЕМЕНА» — это история самоотверженного труда единомышленников, нацеленных на решение главной задачи — поступательное развитие сельского хозяйства региона и России, за счет обеспечения высококачественными семенами.</p>
+          </div><a class="common__link common__link--backing company-section__link hidden-dlink" data-al="#">Узнать больше</a>
+          <div class="company-section__info">
+            <div class="tabs company-section__info-tabs js-tabs" data-tabs="company">
+              <ul class="tabs__list">
+                <li class="tabs__item tabs__item--active">
+                  <div class="tabs__button" data-tab="grown">
+                    <p class="tabs__button-count">50 000</p>
+                    <p class="tabs__button-text">гектаров</p>
+                    <p class="tabs__button-desc">пашни</p>
+                  </div>
+                </li>
+                <li class="tabs__item">
+                  <div class="tabs__button" data-tab="child">
+                    <p class="tabs__button-count">800</p>
+                    <p class="tabs__button-text">рабочих мест</p>
+                    <p class="tabs__button-desc">создано       </p>
+                  </div>
+                </li>
+                <li class="tabs__item">
+                  <div class="tabs__button" data-tab="grown">
+                    <p class="tabs__button-count">35 000</p>
+                    <p class="tabs__button-text">тонн</p>
+                    <p class="tabs__button-desc">семян зерновых и зернобобовых в год</p>
+                  </div>
+                </li>
+                <li class="tabs__item">
+                  <div class="tabs__button" data-tab="child">
+                    <p class="tabs__button-count">150 000</p>
+                    <p class="tabs__button-text">тонн</p>
+                    <p class="tabs__button-desc">производство и реализация зерна в год     </p>
+                  </div>
+                </li>
+                <li class="tabs__item">
+                  <div class="tabs__button" data-tab="grown">
+                    <p class="tabs__button-count">40 000</p>
+                    <p class="tabs__button-text">тонн</p>
+                    <p class="tabs__button-desc">в год мощность маслозавода   </p>
+                  </div>
+                </li>
+                <li class="tabs__item">
+                  <div class="tabs__button" data-tab="child">
+                    <p class="tabs__button-count">200 000</p>
+                    <p class="tabs__button-text">тонн зерна</p>
+                    <p class="tabs__button-desc">ёмкость складского хозяйства  </p>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="company-section__info-container" data-tabs-content="company">
+              <div class="company-section__info-content" data-tab-content="grown">
+                <div class="company-section__img-wrap"><img class="company-section__img" src="./img/company/company-img-1.png" alt=""></div>
+                <div class="company-section__small-img-wrap"><img class="company-section__small-img" src="./img/company/company-img-2.png" alt=""></div>
+              </div>
+              <div class="company-section__info-content" data-tab-content="child">
+                <div class="company-section__img-wrap"><img class="company-section__img" src="./img/company/company-img-1.png" alt=""></div>
+                <div class="company-section__small-img-wrap"><img class="company-section__small-img" src="./img/company/company-img-2.png" alt=""></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- END ABOUT COMPANY-->
+      <!-- BEGIN NEWS-->
       <section class="news news-section">
         <div class="container">
           <h3 class="common__h3-heading news-section__heading">Новости</h3>
@@ -172,6 +243,7 @@
           </div>
         </div>
       </section>
+      <!-- END NEWS-->
     </main>
     <footer class="footer">
       <div class="footer__top-wrap">

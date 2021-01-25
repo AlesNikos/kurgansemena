@@ -3,6 +3,7 @@ import Menu from './parts/menu'
 import Burger from './parts/burger'
 import Header_fixed from './parts/header-fixed'
 import Slider from './parts/slider'
+import Tabs from './parts/tabs'
 
 document.addEventListener('DOMContentLoaded', () => {
 
@@ -31,6 +32,10 @@ document.addEventListener('DOMContentLoaded', () => {
       direction: "horizontal",
       watchOverflow: true,
     });
+  }
+
+  if(document.querySelector('.js-tabs')) {
+    const tabs = new Tabs();
   }
 
 
