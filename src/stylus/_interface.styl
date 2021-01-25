@@ -23,6 +23,8 @@ body
   padding-top 146px
   overflow-x hidden
   background-color gray
+  @media tablet-portrait-large
+    padding-top 104px
 
 button
   border none
@@ -63,6 +65,8 @@ ul
     font-weight 400
     line-height 54px
   &__wysiwyg
+    & p:not([class])
+      margin 0
     & p:not([class]):not(:last-child)
       margin 0 0 20px 0
 

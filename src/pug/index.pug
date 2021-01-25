@@ -7,7 +7,7 @@ html(lang="ru")
     title Кургансемена
   body
     div(style="display: none")
-        //- include ../../build/images/sprite.svg
+      include ../../dist/img/sprite_inline.svg
     include layout/_header.pug
     main.main.main-page
 
@@ -92,10 +92,10 @@ html(lang="ru")
             |Узнать больше
           
           .company-section__info
-            .tabs.company-section__info-tabs.js-tabs.js-tabs-mouseover(data-tabs="company")
+            .tabs.company-section__info-tabs.js-tabs(data-tabs="company")
               ul.tabs__list
                 li.tabs__item.tabs__item--active
-                  .tabs__button(data-tab="grown")
+                  .tabs__button.js-tab-mouseover(data-tab="grown")
                     p.tabs__button-count
                       |50 000
                     p.tabs__button-text
@@ -104,7 +104,7 @@ html(lang="ru")
                       |пашни
 
                 li.tabs__item
-                  .tabs__button(data-tab="child")
+                  .tabs__button.js-tab-mouseover(data-tab="child")
                     p.tabs__button-count
                       |800
                     p.tabs__button-text
@@ -113,7 +113,7 @@ html(lang="ru")
                       |создано       
 
                 li.tabs__item
-                  .tabs__button(data-tab="grown")
+                  .tabs__button.js-tab-mouseover(data-tab="grown")
                     p.tabs__button-count
                       |35 000
                     p.tabs__button-text
@@ -121,7 +121,7 @@ html(lang="ru")
                     p.tabs__button-desc
                       |семян зерновых и зернобобовых в год
                 li.tabs__item
-                  .tabs__button(data-tab="child")
+                  .tabs__button.js-tab-mouseover(data-tab="child")
                     p.tabs__button-count
                       |150 000
                     p.tabs__button-text
@@ -129,7 +129,7 @@ html(lang="ru")
                     p.tabs__button-desc
                       |производство и реализация зерна в год     
                 li.tabs__item
-                  .tabs__button(data-tab="grown")
+                  .tabs__button.js-tab-mouseover(data-tab="grown")
                     p.tabs__button-count
                       |40 000
                     p.tabs__button-text
@@ -137,7 +137,7 @@ html(lang="ru")
                     p.tabs__button-desc
                       |в год мощность маслозавода   
                 li.tabs__item
-                  .tabs__button(data-tab="child")
+                  .tabs__button.js-tab-mouseover(data-tab="child")
                     p.tabs__button-count
                       |200 000
                     p.tabs__button-text
@@ -201,6 +201,17 @@ html(lang="ru")
                 .history__description.common__wysiwyg
                   p
                     |В марте 1988 года приказом по агропромышленному комитету Курганской области была образована научно-производственная система «Семена», в последствии преобразованная в научно-производственный агрохолдинг «Кургансемена».
+            .history__content(data-tab-content="1995")
+              .history__img-wrap
+                img.history__img(src="./img/history-img.png", alt="")
+              span.history__year
+                |1995
+              .history__content-info
+                h3.common__h3-heading.history__heading
+                  |Основание
+                .history__description.common__wysiwyg
+                  p
+                    |В марте 1988 года приказом по агропромышленному комитету Курганской области была образована научно-производственная система «Семена», в последствии преобразованная в научно-производственный агрохолдинг «Кургансемена».
 
       // END HISTORY
 
@@ -211,15 +222,53 @@ html(lang="ru")
             |Новости
           .news-slider.swiper-container.js-news-slider
             .news-slider__list.swiper-wrapper
-              .news-slider__item.swiper-slide
-                article.news-preview
-                  .news-preview__img-wrap
-                    img.news-preview__img(src="./img/news/news-img-1.png", alt="")
+              article.news-slider__item.swiper-slide
+                a.news-preview.hidden-dlink(data-al="#")
+                  img.news-preview__img(src="./img/news/news-img-1.png", alt="")
+                  //- .news-preview__img-wrap
                   .news-preview__info
                     .news-preview__date
                       |18/08/2020
                     h6.news-preview__title
                       |Экспортер года
+              article.news-slider__item.swiper-slide
+                a.news-preview.hidden-dlink(data-al="#")
+                  img.news-preview__img(src="./img/news/news-img-2.png", alt="")
+                  //- .news-preview__img-wrap
+                  .news-preview__info
+                    .news-preview__date
+                      |19/07/2020
+                    h6.news-preview__title
+                      |В научно-производственном агрохолдинге «Кургансемена» определили лучшего оператора машинного доения коров
+              article.news-slider__item.swiper-slide
+                a.news-preview.hidden-dlink(data-al="#")
+                  img.news-preview__img(src="./img/news/news-img-3.png", alt="")
+                  //- .news-preview__img-wrap
+                  .news-preview__info
+                    .news-preview__date
+                      |17/07/2020
+                    h6.news-preview__title
+                      |Агрохолдинг «Кургансемена» начинает уборочную страду
+              article.news-slider__item.swiper-slide
+                a.news-preview.hidden-dlink(data-al="#")
+                  img.news-preview__img(src="./img/news/news-img-1.png", alt="")
+                  //- .news-preview__img-wrap
+                  .news-preview__info
+                    .news-preview__date
+                      |18/08/2020
+                    h6.news-preview__title
+                      |Экспортер года
+          .news-slider__arrows
+            .news-slider__arrow.js-news-slider-arrow-left
+                svg(width="39" height="31")
+                    use(xlink:href="#arrow-left")
+            .news-slider__arrow.js-news-slider-arrow-right
+                svg(width="39" height="31")
+                    use(xlink:href="#arrow-right")
+          .news__link-wrapper
+            a.common__link.news__link.hidden-dlink(data-al="#")
+              |Все новости
+
       // END NEWS
 
 

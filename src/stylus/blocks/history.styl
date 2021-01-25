@@ -1,6 +1,6 @@
 .history
   position relative
-  padding-bottom 150px
+  padding-bottom 135px
   &__tabs
     position absolute
     top 0
@@ -8,17 +8,18 @@
     transform translateX(-50%)
     width 581px
     margin 0 auto
+    z-index 1
   &__tabs-list
     display flex
     align-items center
-    padding 24px 60px 24px
+    padding 17px 60px 15px
     border-radius 0 0 20px 20px
     background-color main-color
   &__tabs-item 
     border-bottom 1px solid transparent
     transition 0.3s
     &:not(:last-child) 
-      margin-right 37px
+      margin-right 35px
   &__tabs-button
     padding 0
     background-color transparent
@@ -31,6 +32,40 @@
     transition 0.3s
     &:hover 
       color #a3c5ac
+  &__content
+    position relative
+  &__img-wrap
+    position relative
+    width 100%
+    height 470px
+    border-radius 20px
+    overflow hidden
+  &__img 
+    position absolute
+    left 50%
+    top 50%
+    transform translate(-50%, -50%)
+    width 100%
+    height 100%
+    object-fit cover
+  &__year
+    position absolute
+    top 339px
+    left 125px
+    color gray
+    font-size 200px
+    font-weight 400
+    line-height 145px
+    letter-spacing: -6px;
+    z-index 1
+  &__content-info
+    max-width 1203px
+    width 100%
+    margin 43px auto 0
+  &__heading
+    margin 0 0 21px 0
+  &__description
+    max-width 625px
     
 
 .tabs__item--active

@@ -1,18 +1,24 @@
 .news-section
-  padding 75px 0
+  padding 0 0 150px
   & > .container
+    position relative
     max-width 1240px
   &__heading
-    margin 0 0 40px 0
+    margin 0 0 27px 0
 
 .news-preview
   position relative
+  display flex
   width 100%
   height 435px
-  
+  padding 36px 50px 31px
   border-radius 20px
   // background-color #000
   overflow hidden
+  text-decoration none
+  &:hover 
+    .news-preview__title
+      border-bottom-color: #fff
   &:after
     content ''
     position absolute
@@ -21,10 +27,12 @@
     left 0
     top 0
     background linear-gradient(to top, rgba(0,0,0,0.6) 0 20%, rgba(0,0,0,0) 70%)
-  &__img-wrap
-    position absolute
-    width 100%
-    height 100%
+  // &__img-wrap
+  //   position absolute
+  //   width 100%
+  //   height 100%
+  //   border-radius 20px
+  //   overflow hidden
   &__img
     position absolute
     top 50%
@@ -36,23 +44,50 @@
     object-fit cover
   &__info
     position relative
-    display flex
-    flex-direction column
-    justify-content flex-end
-    align-items center
+    // display flex
+    // flex-direction column
+    // justify-content flex-end
+    // align-items center
+    display block
+
     width 100%
-    height 100%
-    padding 36px 50px
+    // height 100%
+    margin-top auto
+    text-align center
+    // padding 36px 50px
     z-index 1
   &__date
-    margin 0 0 20px 0
+    margin 0 0 15px 0
     color #fff
     font-size 16px
     font-weight 400
     line-height 26px
   &__title 
+    display inline
     margin 0
+    border-bottom 1px solid transparent
     color #fff
     font-size 18px
     font-weight 400
     line-height 26px
+    transition 0.3s
+
+.news-slider
+  position relative
+  overflow visible
+  overflow-x: hidden
+  &__arrows
+    position absolute
+    top 12px
+    right 20px
+    z-index 1
+    display flex
+    flex-wrap nowrap
+    justify-content space-between
+    width 98px
+    height 31px
+    // @media phone
+    //     top -87px
+  &__arrow
+    outline none
+    cursor pointer

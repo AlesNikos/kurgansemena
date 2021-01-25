@@ -151,7 +151,7 @@ gulp.task('svgSprite', function() {
 })
 
 gulp.task('svgStoreSprite', function() {
-  return gulp.src([source_folder + '/iconsprite/*.svg'])
+  return gulp.src([source_folder + '/iconsprite_inline/*.svg'])
   .pipe(svgstore({
             inlineSvg: true
         }))
@@ -176,7 +176,7 @@ function clean(params) {
   return del(path.clean)
 }
 
-let build = gulp.series(clean, gulp.parallel(cssBuild,htmlBuild,jsBuild,jsPluginsBuild,imgBuild,'fonts'))
+let build = gulp.series(clean, gulp.parallel(cssBuild,htmlBuild,jsBuild,jsPluginsBuild,imgBuild,'fonts', 'svgSprite'))
 let watch = gulp.parallel(build,watchFiles,browserSync);
 
 exports.htmlBuild = htmlBuild;

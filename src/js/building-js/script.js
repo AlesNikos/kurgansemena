@@ -25,12 +25,24 @@ document.addEventListener('DOMContentLoaded', () => {
   if(document.querySelector(".js-news-slider")) {
     let newsSwiper = new Swiper(".js-news-slider", {
       init: true,
-      spaceBetween: 42,
-      speed: 1000,
+      // spaceBetween: 42,
+      speed: 500,
       slidesPerView: 3,
       loop: false,
       direction: "horizontal",
-      watchOverflow: true,
+      // watchOverflow: true,
+      navigation: {
+        nextEl: ".js-news-slider-arrow-right",
+        prevEl: ".js-news-slider-arrow-left",
+      },
+      breakpoints: {
+        320: {
+          spaceBetween: 20
+        },
+        1480: {
+          spaceBetween: 42,
+        },
+      },
     });
   }
 
