@@ -1,10 +1,10 @@
 export default class Tabs {
-  constructor() {
+    constructor() {
     // this.seoLinks = document.querySelectorAll(".hidden-dlink");
-    this.init();
-  }
+        this.init();
+    }
 
-  init() {
+    init() {
 
     let tabsContainers = document.querySelectorAll(".js-tabs");
     if(tabsContainers){
@@ -19,7 +19,7 @@ export default class Tabs {
         let tabButtons = tabsContainer.querySelectorAll("[data-tab]");
         if(tabButtons){
             for(let i = 0; i < tabButtons.length; i++){
-                tabButtons[i].addEventListener("mouseover", changeTabState.bind(null, tabsContainer, tabButtons[i]));
+                tabButtons[i].addEventListener("click", changeTabState.bind(null, tabsContainer, tabButtons[i]));
             };
         };
 

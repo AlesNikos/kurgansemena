@@ -1,0 +1,37 @@
+.history
+  position relative
+  padding-bottom 150px
+  &__tabs
+    position absolute
+    top 0
+    left 50%
+    transform translateX(-50%)
+    width 581px
+    margin 0 auto
+  &__tabs-list
+    display flex
+    align-items center
+    padding 24px 60px 24px
+    border-radius 0 0 20px 20px
+    background-color main-color
+  &__tabs-item 
+    border-bottom 1px solid transparent
+    transition 0.3s
+    &:not(:last-child) 
+      margin-right 37px
+  &__tabs-button
+    padding 0
+    background-color transparent
+    font-size 16px
+    font-weight 400
+    line-height 26px
+    color #fff
+    cursor pointer
+    outline none
+    transition 0.3s
+    &:hover 
+      color #a3c5ac
+    
+
+.tabs__item--active
+  border-bottom 1px solid #fff

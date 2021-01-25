@@ -2059,6 +2059,9 @@ body.js-burger-menu-is-open .burger::after {
     max-width: 100%;
   }
 }
+.company-section__info-tabs .tabs__item--active {
+  border: none;
+}
 @-webkit-keyframes spoiler {
   0% {
     opacity: 0.3;
@@ -2094,6 +2097,56 @@ body.js-burger-menu-is-open .burger::after {
     -webkit-transform: scale(1);
     transform: scale(1);
   }
+}
+.history {
+  position: relative;
+  padding-bottom: 150px;
+}
+.history__tabs {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  transform: translateX(-50%);
+  width: 581px;
+  margin: 0 auto;
+}
+.history__tabs-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding: 24px 60px 24px;
+  border-radius: 0 0 20px 20px;
+  background-color: #007d2f;
+}
+.history__tabs-item {
+  border-bottom: 1px solid transparent;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+.history__tabs-item:not(:last-child) {
+  margin-right: 37px;
+}
+.history__tabs-button {
+  padding: 0;
+  background-color: transparent;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 26px;
+  color: #fff;
+  cursor: pointer;
+  outline: none;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+.history__tabs-button:hover {
+  color: #a3c5ac;
+}
+.tabs__item--active {
+  border-bottom: 1px solid #fff;
 }
 .news-section {
   padding: 75px 0;

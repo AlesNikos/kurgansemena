@@ -92,7 +92,7 @@ html(lang="ru")
             |Узнать больше
           
           .company-section__info
-            .tabs.company-section__info-tabs.js-tabs(data-tabs="company")
+            .tabs.company-section__info-tabs.js-tabs.js-tabs-mouseover(data-tabs="company")
               ul.tabs__list
                 li.tabs__item.tabs__item--active
                   .tabs__button(data-tab="grown")
@@ -161,6 +161,48 @@ html(lang="ru")
           
       // END ABOUT COMPANY
 
+      // BEGIN HISTORY
+      section.history.history-section
+        .container
+
+          .tabs.history__tabs.js-tabs(data-tabs="history")
+            ul.tabs__list.history__tabs-list
+              li.tabs__item.tabs__item--active.history__tabs-item.history__tabs-item--active
+                button.tabs__button.history__tabs-button(data-tab="1988")
+                  |1988
+              li.tabs__item.history__tabs-item
+                button.tabs__button.history__tabs-button(data-tab="1995")
+                  |1995                         
+              li.tabs__item.history__tabs-item
+                button.tabs__button.history__tabs-button(data-tab="1999")
+                  |1999                   
+              li.tabs__item.history__tabs-item
+                button.tabs__button.history__tabs-button(data-tab="2004")
+                  |2004
+              li.tabs__item.history__tabs-item
+                button.tabs__button.history__tabs-button(data-tab="2010")
+                  |2010
+              li.tabs__item.history__tabs-item
+                button.tabs__button.history__tabs-button(data-tab="2015")
+                  |2015
+              li.tabs__item.history__tabs-item
+                button.tabs__button.history__tabs-button(data-tab="2020")
+                  |2020
+
+          .history__container(data-tabs-content="history")
+            .history__content(data-tab-content="1988")
+              .history__img-wrap
+                img.history__img(src="./img/history-img.png", alt="")
+              span.history__year
+                |1988
+              .history__content-info
+                h3.common__h3-heading.history__heading
+                  |Основание
+                .history__description.common__wysiwyg
+                  p
+                    |В марте 1988 года приказом по агропромышленному комитету Курганской области была образована научно-производственная система «Семена», в последствии преобразованная в научно-производственный агрохолдинг «Кургансемена».
+
+      // END HISTORY
 
       // BEGIN NEWS
       section.news.news-section
