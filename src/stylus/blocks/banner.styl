@@ -1,4 +1,5 @@
 .banner
+  padding-bottom 150px
   background-color #fff
 
 .main-slider
@@ -43,6 +44,7 @@
     justify-content center
     flex-direction column
     width 100%
+    padding 20px
     z-index 1
   &__heading
     margin 0 0 23px 0
@@ -52,9 +54,13 @@
     font-weight 700
     line-height 45px
     text-transform uppercase
+    @media phone 
+      font-size 48px
+
   &__description
     max-width 850px
     margin-bottom 24px
+    text-align center
     & p:not([class])
       margin 0
       font-size 24px
@@ -63,6 +69,129 @@
       text-transform uppercase
       color #fff
       text-shadow 0 0 59px #007d2f
+      @media phone 
+        font-size 18px
 
   &__pagination
     display flex
+    justify-content space-around
+    padding 21px 45px 20px
+    border-radius 0 0 20px 20px
+    background-color #fff
+    box-shadow 0 16px 51px rgba(0, 0, 0, 0.08)
+    @media tablet-portrait-large
+      justify-content center
+  &__pagination-img
+    @media desktop-hover
+      position relative
+      width 74px
+      height 74px
+      margin-right 17px
+      // box-shadow inset 0 0 38px #fafafa
+      background-color #fcfcfc
+      border-radius 50%
+      transition background-color 0.3s
+      &:after
+        content ''
+        position absolute
+        top 50%
+        left 50%
+        transform translate(-50%, -50%)
+        width 100%
+        height 100%
+        // background-image url('../img/icons/icons.svg#Nauka')
+        background-repeat no-repeat
+        background-position center
+        background-size cover
+        transition background-image 0.3s
+  &__pagination-img--1
+    &:after
+      @media desktop-hover
+        width 51px
+        height 66px
+        background-image url('../img/icons/icons.svg#Nauka')
+  &__pagination-img--2
+    &:after
+      @media desktop-hover
+        width 79px
+        height 79px
+        background-image url('../img/icons/icons.svg#Semena')
+  &__pagination-img--3
+    &:after
+      @media desktop-hover
+        width 110px
+        height 117px
+        background-image url('../img/icons/icons.svg#Zerno')
+  &__pagination-img--4
+    &:after
+      @media desktop-hover
+        width 88px
+        height 88px
+        background-image url('../img/icons/icons.svg#Maslo')
+  &__pagination-img--5
+    &:after
+      @media desktop-hover
+        width 126px
+        height 126px
+        background-image url('../img/icons/icons.svg#Elevator')
+  &__pagination-text 
+    display none
+    @media desktop-hover
+      display block
+      font-size 18px
+      font-weight 400
+      line-height 23px
+      border-bottom 1px solid transparent
+      transition 0.3s
+
+
+
+
+.swiper-container
+  @media desktop-hover
+    overflow visible
+
+.swiper-pagination-bullet 
+  width 24px
+  height 24px
+  background-color #fafafa
+  opacity 1
+  outline none
+  @media desktop-hover
+    display inline-flex
+    align-items center
+    width auto
+    height auto
+    background none
+    color text-color
+    opacity 1
+    outline none
+    &:hover:not(.swiper-pagination-bullet-active)
+      .main-slider__pagination-img
+        background-color main-color
+      .main-slider__pagination-img--1
+        &:after
+          background-image url('../img/icons/icons.svg#Nauka_white')
+      .main-slider__pagination-img--2
+        &:after
+          background-image url('../img/icons/icons.svg#Semena_white')
+      .main-slider__pagination-img--3
+        &:after
+          background-image url('../img/icons/icons.svg#Zerno_white')
+      .main-slider__pagination-img--4
+        &:after
+          background-image url('../img/icons/icons.svg#Maslo_white')
+      .main-slider__pagination-img--5
+        &:after
+          background-image url('../img/icons/icons.svg#Elevator_white')
+      .main-slider__pagination-text
+        color text-color-hover
+        border-bottom 1px solid text-color-hover
+
+.swiper-pagination-bullet-active
+  @media tablet-portrait-large
+    background-color main-color
+  .main-slider__pagination-text
+    @media desktop-hover
+      color text-color-hover
+      border-bottom 1px solid text-color-hover
