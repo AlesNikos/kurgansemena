@@ -6,7 +6,6 @@ export default class Menu {
   }
 
   init() {
-    console.log('test');
     this.menuItem.forEach(function(elem){
         elem.addEventListener('mouseenter', function(e) {
           let target = e.target;
