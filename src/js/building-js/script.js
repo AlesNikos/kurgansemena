@@ -4,6 +4,8 @@ import Burger from './parts/burger'
 import Header_fixed from './parts/header-fixed'
 import Slider from './parts/slider'
 import Tabs from './parts/tabs'
+import Popup from './parts/popup'
+import Validation from './parts/validation'
 
 document.addEventListener('DOMContentLoaded', () => {
 
@@ -25,22 +27,26 @@ document.addEventListener('DOMContentLoaded', () => {
   if(document.querySelector(".js-news-slider")) {
     let newsSwiper = new Swiper(".js-news-slider", {
       init: true,
-      // spaceBetween: 42,
       speed: 500,
       slidesPerView: 3,
       loop: false,
       direction: "horizontal",
-      // watchOverflow: true,
       navigation: {
         nextEl: ".js-news-slider-arrow-right",
         prevEl: ".js-news-slider-arrow-left",
       },
       breakpoints: {
         320: {
-          spaceBetween: 20
+          spaceBetween: 20,
+          slidesPerView: 1,
         },
-        1480: {
+        520: {
+          spaceBetween: 20,
+          slidesPerView: 2,
+        },
+        1024: {
           spaceBetween: 42,
+          slidesPerView: 3,
         },
       },
     });
@@ -50,5 +56,8 @@ document.addEventListener('DOMContentLoaded', () => {
     const tabs = new Tabs();
   }
 
+  const popup = new Popup();
+
+  const validation = new Validation();
 
 });

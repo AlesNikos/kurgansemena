@@ -1,0 +1,118 @@
+.form
+  position relative
+  &__row
+    display flex
+    align-items center
+    flex-wrap wrap
+    margin 0 -15px
+  &__group
+    position relative
+    width 100%
+    padding 0 15px
+    margin-bottom 21px
+    &--half
+      width 50%
+      @media tablet-portrait-small
+        width 100%
+    &--checkbox
+      width 75%
+      margin-top 16px
+      @media tablet-portrait-medium
+        width 100%
+    &--button
+      width 25%
+      margin-top 10px
+      @media tablet-portrait-medium
+        width 100%
+  &__label 
+    color text-color
+    font-size 16px
+    font-weight 400
+    line-height 28px
+    span 
+      color main-color
+  
+  &__input
+    width 100%
+    padding 6px 15px 5px 15px
+    font-size 16px
+    line-height 28px
+    font-weight 400
+    color text-color
+    border 1px solid #e8e8e8
+    outline none
+    background-color #f7f7f7
+
+    &.error 
+        border-color #e91616
+        & + .form__error-text
+          display block
+
+  &__textarea
+    display block
+    width 100%
+    min-height 79px
+    padding 6px 15px 5px 15px
+    font-size 16px
+    line-height 28px
+    font-weight 400
+    color text-color
+    border 1px solid #e8e8e8
+    outline none
+    background-color #f7f7f7
+    resize none
+
+  &__checkbox
+    &-input  
+      display none
+      &:checked + .form__checkbox-label:after
+          opacity 1
+      &.error + .form__checkbox-label:before
+          border-color #a4023e
+    &-label
+      position relative
+      display inline-flex
+      align-items center
+      font-size 16px
+      cursor pointer
+      @media tablet-portrait-small
+        align-items flex-start
+
+      &:before
+          content ''
+          flex-shrink: 0
+          display inline-block
+          width 24px
+          height 24px
+          margin-right 9px
+          border 1px solid #e8e8e8
+          background-color #f7f7f7
+      &:after
+          content ''
+          flex-shrink: 0
+          position absolute
+          top 2px
+          left 1px
+          width 24px
+          height 24px
+          background url('../img/icons/icons.svg#icon-check') no-repeat center
+          background-color main-color
+          opacity 0
+          transition 0.3s ease
+      a
+          color main-color
+          text-decoration none
+          border-bottom: 1px solid main-color
+          transition 0.3s ease 
+          &:hover 
+              border-color: transparent
+  &__error-text
+    position absolute
+    top 100%
+    left 16px
+    display none
+    margin-top 7px
+    font-size 13px
+    font-weight 400
+    line-height 11px
+    color #e91616

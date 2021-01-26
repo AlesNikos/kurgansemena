@@ -13,6 +13,11 @@ export default class Tabs {
         };
     };
 
+    let tabsContainer = document.querySelector('.js-tabs-mouseover');
+    if(tabsContainer) {
+        let tabsMouseOver = new TabsInitMouseOver(tabsContainer);
+    }
+
     // Инициализирует табы
     function TabsInit(tabsContainer){
 
@@ -20,6 +25,21 @@ export default class Tabs {
         if(tabButtons){
             for(let i = 0; i < tabButtons.length; i++){
                 tabButtons[i].addEventListener("click", changeTabState.bind(null, tabsContainer, tabButtons[i]));
+            };
+        };
+
+        // Находим кнопку активного таба
+        let activeTabButton = tabsContainer.querySelector(".tabs__item--active").firstElementChild;
+
+        // Выводим контент активного таба
+        changeContent(activeTabButton, tabsContainer);
+    };
+    function TabsInitMouseOver(tabsContainer){
+
+        let tabButtons = tabsContainer.querySelectorAll("[data-tab]");
+        if(tabButtons){
+            for(let i = 0; i < tabButtons.length; i++){
+                tabButtons[i].addEventListener("mouseover", changeTabState.bind(null, tabsContainer, tabButtons[i]));
             };
         };
 

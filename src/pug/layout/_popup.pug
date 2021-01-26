@@ -1,0 +1,52 @@
+.hidden-block
+  .hidden-block__background
+  button.hidden-block__close-button.js-close-popup-button
+  .hidden-block__container
+      .hidden-block__wrapper.js-close-popup
+
+        // START ЗАДАТЬ ВОПРОС
+        section.question-popup.popup.hidden-block__popup(data-popup="callback-popup")
+            button.hidden-block__close-button.hidden-block__close-button--inner.js-close-popup-button
+            h4.popup__title
+                |Заказать обратный звонок
+            p.popup__subtitle
+                |Заполните поля ниже и мы свяжемся с вами в ближайшее время. <span>*</span> — поля со звёздочкой обязательны для заполнения.
+            form.popup__form.form
+                .form__row
+                    .form__group.form__group--half
+                        label.form__label(for="name-31")
+                            | Ваше имя <span class="common-req-sign">*</span>
+                        input.form__input(type="text", data-req="req", id="name-31", data-content="name")
+                        span.form__error-text
+                          |Поле не заполнено или заполнено с ошибкой
+                    .form__group.form__group--half
+                        label.form__label(for="phone-31")
+                            | Ваш телефон <span class="common-req-sign">*</span>
+                        input.form__input.js-imask-phone(type="text", data-req="req", name="phone", id="phone-31", data-content="phone")
+                        span.form__error-text
+                          |Поле не заполнено или заполнено с ошибкой
+                .form__row
+                    .form__group
+                        label.form__label
+                            | Комментарий
+                        textarea.form__textarea(name="text", autocomplete="off", data-type="textarea")
+                .form__row
+                    .form__group.form__group--checkbox
+                        input.form__checkbox-input(type="checkbox", id="checkbox-4", data-req)
+                        label.form__checkbox-label(for="checkbox-4")
+                            span.form__checkbox-description
+                                |Даю согласие на 
+                                a(href="#") обработку персональных данных
+                    .form__group.form__group--button
+                        button.common__button.form__button
+                            span
+                                |Отправить
+
+        // END ЗАДАТЬ ВОПРОС
+
+        // START THANKS
+        section.thanks-popup.popup.hidden-block__popup(data-popup="thanks-popup")
+            button.hidden-block__close-button.hidden-block__close-button--inner.popup__close-button.js-close-popup-button
+            h4.popup__title
+                |Ваша заявка успешно отправлена
+        // END THANKS

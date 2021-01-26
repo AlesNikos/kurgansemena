@@ -1,10 +1,18 @@
 .news-section
   padding 0 0 150px
+  @media phone 
+    padding 0 0 90px
   & > .container
     position relative
     max-width 1240px
+
+.news
   &__heading
     margin 0 0 27px 0
+  &__link-wrapper
+    position relative
+    margin 41px 0 0 0
+    text-align center
 
 .news-preview
   position relative
@@ -16,6 +24,8 @@
   // background-color #000
   overflow hidden
   text-decoration none
+  @media tablet-landscape-medium
+    padding 31px 30px
   &:hover 
     .news-preview__title
       border-bottom-color: #fff
@@ -27,12 +37,6 @@
     left 0
     top 0
     background linear-gradient(to top, rgba(0,0,0,0.6) 0 20%, rgba(0,0,0,0) 70%)
-  // &__img-wrap
-  //   position absolute
-  //   width 100%
-  //   height 100%
-  //   border-radius 20px
-  //   overflow hidden
   &__img
     position absolute
     top 50%
@@ -44,17 +48,10 @@
     object-fit cover
   &__info
     position relative
-    // display flex
-    // flex-direction column
-    // justify-content flex-end
-    // align-items center
     display block
-
     width 100%
-    // height 100%
     margin-top auto
     text-align center
-    // padding 36px 50px
     z-index 1
   &__date
     margin 0 0 15px 0
@@ -86,8 +83,20 @@
     justify-content space-between
     width 98px
     height 31px
-    // @media phone
-    //     top -87px
+    @media phone
+        top 5px
   &__arrow
+    opacity 1
     outline none
     cursor pointer
+    transition opacity .5s ease
+    &:not(.swiper-button-disabled):hover
+      & svg 
+        fill main-color
+    & svg 
+      fill text-color
+      transition 0.3s
+    &.swiper-button-disabled
+      opacity .15
+      cursor default
+    

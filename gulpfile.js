@@ -176,7 +176,7 @@ function clean(params) {
   return del(path.clean)
 }
 
-let build = gulp.series(clean, gulp.parallel(cssBuild,htmlBuild,jsBuild,jsPluginsBuild,imgBuild,'fonts', 'svgSprite'))
+let build = gulp.series(clean, gulp.parallel(cssBuild,htmlBuild,jsBuild,jsPluginsBuild,imgBuild,'fonts', 'svgSprite', 'svgStoreSprite'))
 let watch = gulp.parallel(build,watchFiles,browserSync);
 
 exports.htmlBuild = htmlBuild;

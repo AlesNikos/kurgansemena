@@ -1,6 +1,8 @@
 .history
   position relative
   padding-bottom 135px
+  @media phone
+    padding-bottom 90px
   &__tabs
     position absolute
     top 0
@@ -9,15 +11,26 @@
     width 581px
     margin 0 auto
     z-index 1
+    @media tablet-portrait-small
+      position static
+      transform translateX(0)
+      width 100%
+      margin-bottom 10px
   &__tabs-list
     display flex
     align-items center
     padding 17px 60px 15px
     border-radius 0 0 20px 20px
     background-color main-color
+    @media tablet-portrait-small
+      padding 17px 20px 5px
+      border-radius 20px
+      flex-wrap wrap
   &__tabs-item 
     border-bottom 1px solid transparent
     transition 0.3s
+    @media tablet-portrait-small
+      margin-bottom 10px
     &:not(:last-child) 
       margin-right 35px
   &__tabs-button
@@ -40,6 +53,9 @@
     height 470px
     border-radius 20px
     overflow hidden
+    animation spoiler 1.5s
+    @media tablet-portrait-small
+      height 370px
   &__img 
     position absolute
     left 50%
@@ -56,8 +72,85 @@
     font-size 200px
     font-weight 400
     line-height 145px
-    letter-spacing: -6px;
+    letter-spacing -6px
     z-index 1
+    animation scale 1s
+    @media laptop
+      left 59px
+    @media tablet-portrait-small
+      top 251px
+      font-size 150px
+    @media phone
+      top 290px
+      font-size 100px
+      line-height 100px
+  &__certificate-wrap 
+    position absolute
+    top 264px
+    right 267px
+    width 306px
+    height 426px
+    z-index 1
+    @media laptop
+      right 181px
+    @media tablet-landscape-medium
+      right 100px
+    @media tablet-landscape-small
+      right 51px
+    @media tablet-portrait-large
+      display none
+    &:hover
+      &:after
+        opacity 1
+        visibility visible
+      &:before
+        opacity 1
+        visibility visible
+      .history__certificate
+        &:after
+          background-color rgba(230, 230, 210, 0.32)
+    &:after
+      content ''
+      position absolute
+      right 0
+      bottom 0
+      display block
+      width 119px
+      height 119px
+      background-color main-color
+      border-radius 100% 0 0 0
+      opacity 0
+      visibility hidden
+      transition opacity 0.3s, visibility 0.3s
+    &:before 
+      content ''
+      position absolute
+      right 32px
+      bottom 32px
+      display block
+      width 29px
+      height 29px
+      background url(../img/icons/icons.svg#icon-zoom) no-repeat center
+      background-size cover
+      z-index 1
+      opacity 0
+      visibility hidden
+      transition opacity 0.3s, visibility 0.3s
+  &__certificate
+    position relative
+    display block
+    width 100%
+    height 100%
+    text-decoration none
+    &:after
+      content ''
+      position absolute
+      top 0
+      left 0
+      width 100%
+      height 100%
+      transition background-color 0.3s
+
   &__content-info
     max-width 1203px
     width 100%
@@ -66,7 +159,12 @@
     margin 0 0 21px 0
   &__description
     max-width 625px
+    @media tablet-portrait-small
+      max-width 100%
     
 
 .tabs__item--active
   border-bottom 1px solid #fff
+
+.fslightbox-toolbar-button
+  display none

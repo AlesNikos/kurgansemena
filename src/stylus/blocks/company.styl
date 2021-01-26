@@ -20,6 +20,10 @@
 
 .company-section
   padding 61px 0 397px
+  @media tablet-portrait-large
+    padding-bottom 125px
+  @media phone
+    padding-bottom 80px
   & > .container
     max-width 1240px
   &__heading
@@ -102,10 +106,12 @@
         padding 0 5px
       @media tablet-portrait-small
         flex 0 0 50%
-        max-width 50%        
+        max-width 50%     
+        height auto   
       @media phone
         flex 0 0 100%
         max-width 100%  
+        // height auto
         padding 0      
       &:not(:nth-of-type(2n))
         margin-right 10px
@@ -125,6 +131,9 @@
           @media tablet-portrait-large
             border-radius 20px
             transform translateY(0px)
+      &:nth-last-of-type(-n+2)
+        &:after 
+          height 110px
       &:after 
         content ''
         position absolute
@@ -162,7 +171,9 @@
       cursor pointer
       @media tablet-portrait-large
         border-radius 20px
-        padding 20px
+        padding 40px
+      @media phone
+        padding 40px
       &:hover 
         @media desktop-hover
           background-color #f1bd66

@@ -126,6 +126,7 @@
     border-radius 17px
     background-color main-color
     cursor pointer
+    outline none
     transition background-color .3s ease
     @media tablet-portrait-large
       margin 0
@@ -182,7 +183,7 @@
     justify-content center
     width 34px
     height 34px
-    padding 4px 10px
+    padding 4px 6px
     border-radius 50%
     background-color green2
     transition 0.3s
@@ -278,8 +279,11 @@
     text-transform uppercase
     white-space nowrap
   &__icon-wrap 
+    display flex
+    align-items center
     width 8px
     margin-left 6px
+    margin-top -3px
     transition transform 0.3s
     @media tablet-portrait-large
       display none
