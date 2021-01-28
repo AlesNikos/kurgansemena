@@ -25,6 +25,19 @@ body
   background-color gray
   @media tablet-portrait-large
     padding-top 104px
+  &-page
+    position relative
+    &:before
+      content ''
+      position absolute
+      top 0
+      left 0
+      right 0
+      width 100%
+      max-height 1015px
+      height 100%
+      background url(../img/white-gradient.png) no-repeat top center
+      background-size cover
 
 button
   border none

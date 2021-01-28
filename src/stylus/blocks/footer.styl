@@ -19,13 +19,28 @@
     width 100%
     margin-left 40px
     @media tablet-portrait-large
+      max-width 100%
       margin-left 0
   &__contacts-list
     margin-top 15px
+    @media tablet-portrait-large
+      display flex
+      flex-wrap wrap
+      margin 15px -10px 0
   &__contacts-item
     color text-color
     font-size 15px
     line-height 23px
+    @media tablet-portrait-large
+      flex 0 0 33.333333%
+      max-width 33.333333%
+      padding 0 10px
+    @media tablet-portrait-medium
+      flex 0 0 50%
+      max-width 50%
+    @media phone
+      flex 0 0 100%
+      max-width 100%
     &:not(:last-of-type)
       margin-bottom 18px
   &__contacts-hint
@@ -114,11 +129,19 @@
 .sitemap
   display flex
   justify-content space-between
+  @media tablet-portrait-large
+    justify-content flex-start
+    flex-wrap wrap
+    margin 0 -10px
   @media tablet-portrait-small
     flex-wrap wrap
   &__list 
     max-width 270px
     width 100%
+    @media tablet-portrait-large
+      flex 0 0 33.333333%
+      max-width 100%
+      padding 0 10px
     @media tablet-portrait-small
       flex 0 0 48%  
       max-width 48%
@@ -127,6 +150,8 @@
       max-width 100%
     &:not(:last-of-type)
       margin-right 40px
+      @media tablet-portrait-large
+        margin-right 0
       @media tablet-portrait-small
         margin-right 0
   &__item 

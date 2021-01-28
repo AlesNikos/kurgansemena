@@ -1,3 +1,12 @@
+@keyframes toUp {
+  from {
+    transform translateY(30px)
+  }
+  to {
+    transform translateY(0)
+  }
+}
+
 .history
   position relative
   padding-bottom 135px
@@ -74,7 +83,7 @@
     line-height 145px
     letter-spacing -6px
     z-index 1
-    animation scale 1s
+    animation toUp 1s
     @media laptop
       left 59px
     @media tablet-portrait-small
@@ -106,9 +115,6 @@
       &:before
         opacity 1
         visibility visible
-      .history__certificate
-        &:after
-          background-color rgba(230, 230, 210, 0.32)
     &:after
       content ''
       position absolute
@@ -149,7 +155,7 @@
       left 0
       width 100%
       height 100%
-      transition background-color 0.3s
+      background-color rgba(230, 230, 210, 0.32)
 
   &__content-info
     max-width 1203px

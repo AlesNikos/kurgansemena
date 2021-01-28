@@ -1,6 +1,6 @@
 .banner
   padding-bottom 75px
-  background-color #fff
+  // background-color #fff
 
 .main-slider
   position relative
@@ -25,6 +25,8 @@
     height 450px
     border-radius 20px 20px 0 0
     overflow hidden
+    @media tablet-portrait-large
+      border-radius 20px
   
   &__image
     position absolute
@@ -78,19 +80,23 @@
     padding 21px 45px 20px
     border-radius 0 0 20px 20px
     background-color #fff
-    box-shadow 0 16px 51px rgba(0, 0, 0, 0.08)
+    // box-shadow 0 16px 51px rgba(0, 0, 0, 0.08)
+    box-shadow 0 8px 40px rgba(0, 0, 0, 0.08)
     @media tablet-portrait-large
       justify-content center
+      padding 24px 45px 0
+      background-color transparent
+      box-shadow none
   &__pagination-img
     @media desktop-hover
       position relative
       width 74px
       height 74px
       margin-right 17px
-      // box-shadow inset 0 0 38px #fafafa
-      background-color #fcfcfc
+      box-shadow inset 0 0 30px #fafafa
+      background-color #fefefe
       border-radius 50%
-      transition background-color 0.3s
+      transition background-color 0.3s, box-shadow 0.3s
       &:after
         content ''
         position absolute
@@ -163,7 +169,8 @@
     outline none
     &:hover:not(.swiper-pagination-bullet-active)
       .main-slider__pagination-img
-        background-color main-color
+        background-color #06933b
+        box-shadow inset 0 0 38px main-color
       .main-slider__pagination-img--1
         &:after
           background-image url('../img/icons/icons.svg#nauka_white')
@@ -182,11 +189,37 @@
       .main-slider__pagination-text
         color text-color-hover
         border-bottom 1px solid text-color-hover
+  @media tablet-portrait-large
+    width 16px
+    height 16px
 
 .swiper-pagination-bullet-active
   @media tablet-portrait-large
     background-color main-color
+  @media desktop-hover
+    .main-slider__pagination-img
+        background-color #06933b
+        box-shadow inset 0 0 38px main-color
+    .main-slider__pagination-img--1
+      &:after
+        background-image url('../img/icons/icons.svg#nauka_white')
+    .main-slider__pagination-img--2
+      &:after
+        background-image url('../img/icons/icons.svg#semena_white')
+    .main-slider__pagination-img--3
+      &:after
+        background-image url('../img/icons/icons.svg#zerno_white')
+    .main-slider__pagination-img--4
+      &:after
+        background-image url('../img/icons/icons.svg#maslo_white')
+    .main-slider__pagination-img--5
+      &:after
+        background-image url('../img/icons/icons.svg#elevator_white')
   .main-slider__pagination-text
     @media desktop-hover
       color text-color-hover
       border-bottom 1px solid text-color-hover
+
+.swiper-container-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet
+  @media tablet-portrait-large
+    margin 0 8px

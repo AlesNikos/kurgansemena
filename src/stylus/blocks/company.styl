@@ -19,6 +19,7 @@
 
 
 .company-section
+  position relative
   padding 61px 0 397px
   @media tablet-portrait-large
     padding-bottom 125px
@@ -32,7 +33,9 @@
   &__description
     max-width 405px
     margin 0 0 32px 0
-    @media tablet-portrait-small
+    @media tablet-portrait-large
+      max-width 650px
+    @media tablet-portrait-medium
       max-width 100%
   &__info
     position relative

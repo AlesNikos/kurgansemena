@@ -9,7 +9,7 @@ header.header
           |Научно-производственный агрохолдинг
       .header__aside
         .header__rows
-          div.header__row.header__row--top
+          .header__row.header__row--top
             .social.header__social
               .social__list
                 a.social__item(href="#", target="_blank")
@@ -27,7 +27,7 @@ header.header
             button.header__button.js-popup-button(data-popup-for='callback-popup')
               span
                   |Обратный звонок
-          div.header__row
+          .header__row
             nav.menu.header__menu
               ul.menu__list
                 li.menu__item.menu__item--active
@@ -141,5 +141,10 @@ header.header
                 li.menu__item.to-eng
                   a.menu__link.hidden-dlink(data-al="")
                     |English
+      a.header__phone.header__phone--mobile.hidden-dlink(data-al="tel:")
+        |+7 (3522) 46-24-77
+      button.header__button.header__button--mobile.js-popup-button(data-popup-for='callback-popup')
+        span
+          |Обратный звонок
       .burger.header__burger
         .burger__stroke

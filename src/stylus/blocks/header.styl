@@ -12,7 +12,7 @@
 
   &.header__fixed 
     padding 20px 0
-    box-shadow: 3px 4px 30px rgba(0, 0, 0, 0.15);
+    box-shadow: 3px 4px 30px rgba(0, 0, 0, 0.1);
     .header__inner
       align-items center
     .header__row--top
@@ -26,6 +26,8 @@
     display flex
     flex-wrap nowrap
     align-items flex-start
+    @media tablet-portrait-large
+      align-items center
   &__aside
     margin 0 0 0 auto
     @media tablet-portrait-large
@@ -49,7 +51,7 @@
       width 100%
       height 100%
       margin-top 0
-      padding 100px 0
+      padding 100px 0 0
       overflow-y scroll
       opacity 0
       visibility hidden
@@ -66,10 +68,10 @@
       align-items flex-start
       width 100%
       margin 50px 0 0 0
-      padding 0 50px
+      padding 0 50px 100px
       order 1
     @media phone
-      padding 0 20px
+      padding 0 20px 100px
 
   &__row:first-of-type
       margin-bottom 28px
@@ -113,6 +115,15 @@
       margin 0 0 24px 0
     &:hover 
       color text-color-hover
+    &--mobile 
+      display none
+      margin 0 29px 0 auto
+      @media tablet-portrait-large
+        display block
+      @media tablet-portrait-medium
+        margin-right 65px
+      @media tablet-portrait-small
+        display none
 
   &__button
     display inline-flex
@@ -132,6 +143,13 @@
       margin 0
     &:hover 
       background-color green-hover
+    &--mobile 
+        display none
+        margin 0 65px 0 0
+        @media tablet-portrait-large
+          display block
+        @media tablet-portrait-medium
+          display none
   &__burger
     position absolute
     top 50%
@@ -171,6 +189,10 @@
     line-height 18px
     color green2
     @media tablet-landscape-large
+      display none
+    @media tablet-portrait-large
+      display block
+    @media phone
       display none
 
 .social 
@@ -341,8 +363,9 @@
     @media phone
       line-height 22px
     &:hover
-      & > .sub-menu__link
-        background-color #028433
+      @media desktop-hover
+        & > .sub-menu__link
+          background-color #028433
   
   &__link
     display flex
@@ -354,7 +377,7 @@
     transition 0.3s
     white-space nowrap
     @media phone
-      padding 10px 20px
+      padding 10px 0
       white-space pre-wrap
 
 
@@ -409,6 +432,7 @@
         transition transform .3s 0s ease, top .3s .4s ease
 
 body.js-burger-menu-is-open
+    overflow hidden
     & .burger
         &::before
             top 10px
