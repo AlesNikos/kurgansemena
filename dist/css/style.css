@@ -1780,7 +1780,7 @@ body.js-burger-menu-is-open .burger::after {
     margin-right: 17px;
     -webkit-box-shadow: inset 0 0 30px #fafafa;
     box-shadow: inset 0 0 30px #fafafa;
-    background-color: #fefefe;
+    background-color: #f8f8f8;
     border-radius: 50%;
     -webkit-transition: background-color 0.3s, -webkit-box-shadow 0.3s;
     transition: background-color 0.3s, -webkit-box-shadow 0.3s;
@@ -1858,7 +1858,7 @@ body.js-burger-menu-is-open .burger::after {
 .swiper-pagination-bullet {
   width: 24px;
   height: 24px;
-  background-color: #fafafa;
+  background-color: #f8f8f8;
   opacity: 1;
   outline: none;
 }
@@ -2395,8 +2395,8 @@ body.js-burger-menu-is-open .burger::after {
   line-height: 145px;
   letter-spacing: -6px;
   z-index: 1;
-  -webkit-animation: toUp 1s;
-  animation: toUp 1s;
+  -webkit-animation: toUp 0.5s;
+  animation: toUp 0.5s;
 }
 @media (max-width: 1480px) {
   .history__year {
@@ -2523,8 +2523,8 @@ body.js-burger-menu-is-open .burger::after {
 }
 @-webkit-keyframes toUp {
   from {
-    -webkit-transform: translateY(30px);
-    transform: translateY(30px);
+    -webkit-transform: translateY(50px);
+    transform: translateY(50px);
   }
   to {
     -webkit-transform: translateY(0);
@@ -2533,8 +2533,8 @@ body.js-burger-menu-is-open .burger::after {
 }
 @keyframes toUp {
   from {
-    -webkit-transform: translateY(30px);
-    transform: translateY(30px);
+    -webkit-transform: translateY(50px);
+    transform: translateY(50px);
   }
   to {
     -webkit-transform: translateY(0);
