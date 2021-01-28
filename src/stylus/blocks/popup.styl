@@ -197,6 +197,14 @@ body.js-popup-is-open
         span 
             color main-color
 
+.fslightbox-container
+    background: rgba(0,0,0,0.5) !important
+
+.fslightbox-toolbar
+    top 33px !important
+    right 33px !important
+    background none !important
+    
 .fslightbox-toolbar-button 
     transform rotate(0deg)
     z-index 1
@@ -210,6 +218,8 @@ body.js-popup-is-open
     outline none
     cursor pointer
     @media tablet-portrait-large
+        display none
+    &:first-of-type
         display none
     &:hover
         transform rotate(90deg)

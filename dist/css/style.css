@@ -3432,6 +3432,14 @@ body.js-popup-is-open .hidden-block__wrapper {
 .popup__subtitle span {
   color: #007d2f;
 }
+.fslightbox-container {
+  background: rgba(0,0,0,0.5) !important;
+}
+.fslightbox-toolbar {
+  top: 33px !important;
+  right: 33px !important;
+  background: none !important;
+}
 .fslightbox-toolbar-button {
   -webkit-transform: rotate(0deg);
   transform: rotate(0deg);
@@ -3453,6 +3461,9 @@ body.js-popup-is-open .hidden-block__wrapper {
   .fslightbox-toolbar-button {
     display: none;
   }
+}
+.fslightbox-toolbar-button:first-of-type {
+  display: none;
 }
 .fslightbox-toolbar-button:hover {
   -webkit-transform: rotate(90deg);
