@@ -817,7 +817,7 @@ button {
   border: none;
 }
 button:focus {
-  ouline: none;
+  outline: none;
 }
 ul {
   margin: 0;
