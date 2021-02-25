@@ -283,6 +283,14 @@
           height 22px
           margin-right 8px
           background url(../img/english-img.png) no-repeat center
+    &.to-rus
+      .menu__link
+        &:before
+          content ''
+          width 22px
+          height 22px
+          margin-right 8px
+          background url(../img/rus-img.png) no-repeat center
 
   &__item + &__item
     margin 0 0 0 39px
@@ -331,6 +339,9 @@
       opacity 0
       visibility hidden
       transition opacity 0.3s, visibility 0.3s
+      @media desktop-medium
+        left auto
+        right 100%
       @media tablet-portrait-large
         position static
         opacity 1

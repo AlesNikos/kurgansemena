@@ -76,7 +76,7 @@
 
   &__pagination
     display flex
-    justify-content space-around
+    justify-content center
     padding 21px 45px 20px
     border-radius 0 0 20px 20px
     background-color #fff
@@ -151,6 +151,13 @@
       transition 0.3s
   &.swiper-container
     overflow visible
+  &>.swiper-pagination-bullets
+    .swiper-pagination-bullet
+      margin 0 4.63%
+      @media laptop 
+        margin 0 3%
+      @media tablet-landscape-small
+        margin 0 2%
 
 .swiper-pagination-bullet 
   width 24px
